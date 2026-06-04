@@ -6,8 +6,8 @@ models:
 
     columns:
 
-      - name: trip_hash
-        description: "Hash da corrida utilizado para identificação única"
+      - name: trip_id
+        description: "id da corrida utilizado para identificação única"
         tests:
           - not_null
           - unique
@@ -37,17 +37,11 @@ models:
         tests:
           - not_null
 
-      - name: RateCodeID
+      - name: rate_code_id
         description: "Código tarifário aplicado"
         tests:
           - not_null
-
-      - name: store_and_fwd_flag
-        description: "Indica se a corrida foi armazenada localmente antes do envio"
-        tests:
-          - not_null
           
-
       - name: payment_type
         description: "Forma de pagamento"
         tests:

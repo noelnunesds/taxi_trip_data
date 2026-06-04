@@ -34,7 +34,7 @@ clean-targets: # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  taxi_trip_data:
+  taxi_trips:
     +catalog: taxi_trips
 
     silver:
