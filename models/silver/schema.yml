@@ -1,0 +1,71 @@
+version: 2
+
+models:
+  - name: taxi_trip_data
+    description: "Dados de corridas de táxi tratados na camada Silver"
+
+    columns:
+
+      - name: trip_hash
+        description: "Hash da corrida utilizado para identificação única"
+        tests:
+          - not_null
+          - unique
+
+      - name: VendorID
+        description: "Identificador do fornecedor da corrida"
+        tests:
+          - not_null
+
+      - name: tpep_pickup_datetime
+        description: "Data e hora de início da corrida"
+        tests:
+          - not_null
+
+      - name: tpep_dropoff_datetime
+        description: "Data e hora de término da corrida"
+        tests:
+          - not_null
+
+      - name: passenger_count
+        description: "Quantidade de passageiros"
+        tests:
+          - not_null
+
+      - name: trip_distance
+        description: "Distância percorrida em milhas"
+        tests:
+          - not_null
+
+      - name: RateCodeID
+        description: "Código tarifário aplicado"
+        tests:
+          - not_null
+
+      - name: store_and_fwd_flag
+        description: "Indica se a corrida foi armazenada localmente antes do envio"
+        tests:
+          - not_null
+          
+
+      - name: payment_type
+        description: "Forma de pagamento"
+        tests:
+          - not_null
+          
+
+      - name: fare_amount
+        description: "Valor da tarifa"
+        tests:
+          - not_null
+
+      - name: total_amount
+        description: "Valor total cobrado"
+        tests:
+          - not_null
+          
+
+      - name: inserted_at
+        description: "Data de ingestão na camada Bronze"
+        tests:
+          - not_null
