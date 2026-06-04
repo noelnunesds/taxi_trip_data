@@ -1,4 +1,4 @@
-WITH (
+WITH taxi_trips as (
     SELECT
         md5(
             concat_ws(
@@ -13,7 +13,7 @@ WITH (
                 dropoff_latitude
             )
         ) AS trip_hash,
-        
+
         VendorID,
         CAST(tpep_pickup_datetime AS TIMESTAMP) AS tpep_pickup_datetime,
         CAST(tpep_dropoff_datetime AS TIMESTAMP) AS tpep_dropoff_datetime,
@@ -30,3 +30,5 @@ WITH (
     FROM 
         {{ source('bronze', 'trips') }}
 )
+
+SELECT * FROM taxi_trips;
