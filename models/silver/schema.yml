@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: taxi_trip_data
+  - name: stg_taxi_trips
     description: "Dados de corridas de táxi tratados na camada Silver"
 
     columns:
