@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: bronze
+    catalog: taxi_trips
+    schema: bronze
+
+    tables:
+      - name: trips
+
+
+
+
